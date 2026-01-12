@@ -8,14 +8,6 @@ nav a:hover {
   color: var(--accent);
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: #12121a;
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -51,3 +43,32 @@ nav a:hover {
   padding: 60px;
 }
 
+.navbar {
+  height: 64px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0c11;
+  border-bottom: 1px solid #1f1f2a;
+}
+
+.store-header {
+  padding: 40px;
+}
+
+.store-header h1 {
+  font-size: 28px;
+}
+
+.store-header p {
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.store-grid {
+  padding: 20px 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
