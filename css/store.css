@@ -1,0 +1,24 @@
+.store {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  padding: 60px;
+}
+
+.product-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0,255,170,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
