@@ -1,0 +1,9 @@
+.buy-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
