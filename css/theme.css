@@ -1,14 +1,10 @@
 :root {
-  --bg-main: #0e0e13;
-  --bg-card: #171720;
-  --accent: #00ffaa;
-  --accent-2: #00aaff;
-  --text-main: #ffffff;
-  --text-muted: #b5b5b5;
+  --bg-main: #0b0b10;
+  --bg-top: #0e0e14;
+  --accent: #00ff9c;
 }
 
 body {
+  margin: 0;
   background: var(--bg-main);
-  color: var(--text-main);
-  font-family: 'Segoe UI', sans-serif;
 }
