@@ -1,0 +1,13 @@
+:root {
+  --bg-main: #0e0e13;
+  --bg-card: #171720;
+  --accent: #00ffaa;
+  --accent-2: #00aaff;
+  --text-main: #ffffff;
+  --text-muted: #b5b5b5;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
