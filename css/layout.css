@@ -1,5 +1,5 @@
 .top-banner {
-  height: 550px;
+  height: 535px;
 
   background:
     linear-gradient(
@@ -15,5 +15,6 @@
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
+
 
 
