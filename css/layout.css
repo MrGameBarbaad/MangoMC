@@ -1,74 +1,17 @@
-nav a {
-  margin-left: 30px;
-  color: var(--text-muted);
-  text-decoration: none;
-}
+.top-banner {
+  height: 220px;
 
-nav a:hover {
-  color: var(--accent);
-}
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(11, 11, 16, 0.2),
+      rgba(11, 11, 16, 0.85)
+    ),
+    url("../assets/background.jpg");
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: bold;
-  font-size: 20px;
-}
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 
-.logo img {
-  height: 36px;
-}
-
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: var(--text-muted);
-  font-size: 18px;
-  margin-bottom: 35px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 60px;
-}
-
-.navbar {
-  height: 64px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0c0c11;
-  border-bottom: 1px solid #1f1f2a;
-}
-
-.store-header {
-  padding: 40px;
-}
-
-.store-header h1 {
-  font-size: 28px;
-}
-
-.store-header p {
-  color: var(--text-muted);
-  margin-top: 6px;
-}
-
-.store-grid {
-  padding: 20px 40px 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
