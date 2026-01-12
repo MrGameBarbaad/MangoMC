@@ -52,3 +52,43 @@ nav a:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 25px rgba(0,255,170,0.15);
 }
+
+.product-card {
+  background: #14141c;
+  border: 1px solid #1f1f2a;
+  border-radius: 12px;
+  padding: 18px;
+  transition: border 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(0,255,170,0.18);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 6px 0 14px;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
