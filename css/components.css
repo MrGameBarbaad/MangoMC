@@ -1,94 +1,32 @@
-.buy-btn {
-  margin-top: 15px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+.banner-logo {
+  width: 160px; /* adjust if needed */
+  animation:
+    float 4s ease-in-out infinite,
+    pulseGlow 3s ease-in-out infinite;
 }
 
-nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: var(--text-muted);
+/* Floating up & down */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-nav a:hover {
-  color: var(--accent);
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  padding: 14px 30px;
-  border-radius: 8px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  border: 1px solid var(--accent);
-  padding: 14px 30px;
-  border-radius: 8px;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.feature-card {
-  background: var(--bg-card);
-  padding: 30px;
-  border-radius: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0,255,170,0.15);
-}
-
-.product-card {
-  background: #14141c;
-  border: 1px solid #1f1f2a;
-  border-radius: 12px;
-  padding: 18px;
-  transition: border 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 0 18px rgba(0,255,170,0.18);
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-}
-
-.product-card p {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin: 6px 0 14px;
-}
-
-.product-card button {
-  width: 100%;
-  padding: 10px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+/* Soft glowing pulse */
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(0, 255, 156, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(0, 255, 156, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(0, 255, 156, 0));
+  }
 }
