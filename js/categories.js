@@ -1,14 +1,28 @@
-const items = document.querySelectorAll(".category-item");
-const homeBtn = document.getElementById("homeBtn");
+document.addEventListener("DOMContentLoaded", () => {
 
-items.forEach(item => {
-  item.addEventListener("click", () => {
-    items.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
+  const homeBtn = document.getElementById("homeBtn");
+  const categories = document.querySelectorAll(".category-item");
+
+  // HOME BUTTON CLICK
+  homeBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // stop page reload
+
+    // remove active from all categories
+    categories.forEach(cat => cat.classList.remove("active"));
+
+    // optional: clear store content
+    const storeContent = document.querySelector(".store-content");
+    if (storeContent) {
+      storeContent.scrollTop = 0;
+    }
   });
-});
 
-homeBtn.addEventListener("click", e => {
-  e.preventDefault();
-  items.forEach(i => i.classList.remove("active"));
+  // CATEGORY CLICK
+  categories.forEach(category => {
+    category.addEventListener("click", () => {
+      categories.forEach(c => c.classList.remove("active"));
+      category.classList.add("active");
+    });
+  });
+
 });
