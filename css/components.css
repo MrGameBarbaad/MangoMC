@@ -44,13 +44,6 @@
   padding: 0;
 }
 
-.category-item img {
-  width: 42px;               /* 🔥 FORCE ICON SIZE */
-  height: 42px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
 .category-item span {
   margin-left: 12px;
   font-size: 15px;
@@ -152,4 +145,10 @@
 
 .category-item.active img {
   filter: brightness(1.15);
+}
+
+.category-item img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
