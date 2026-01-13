@@ -5,16 +5,15 @@
     pulseGlow 4s ease-in-out infinite;
 }
 
-/* Floating up & down */
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-16px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
@@ -29,5 +28,6 @@
     filter: drop-shadow(0 0 8px rgba(255, 165, 40, 0.35));
   }
 }
+
 
 
