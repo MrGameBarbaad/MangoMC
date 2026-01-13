@@ -95,3 +95,21 @@
   color: #000;
 }
 
+.home-button {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 5;
+}
+
+.home-button img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-button:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
