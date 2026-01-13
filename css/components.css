@@ -132,3 +132,16 @@
   cursor: pointer;
   transition: 0.15s ease;
 }
+
+.category-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+
+  width: 3px;
+  background: transparent;
+
+  border-radius: 2px;
+}
