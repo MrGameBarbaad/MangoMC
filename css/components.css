@@ -4,6 +4,10 @@
   animation: pulseOnly 2.5s ease-in-out infinite;
 
   will-change: transform;
+
+  position: relative;
+  
+  z-index: 2;
 }
 
 @keyframes pulseOnly {
@@ -17,3 +21,4 @@
     transform: scale(1);
   }
 }
+
