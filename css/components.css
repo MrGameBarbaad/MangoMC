@@ -166,13 +166,6 @@
 
 /* ================= FEATURED PACKAGES ================= */
 
-.featured-title {
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  color: #f5a623;
-  margin-bottom: 14px;
-}
-
 /* PACKAGE CARD */
 
 .package-card {
@@ -294,5 +287,102 @@
   border-left: 3px solid #00c8ff;
 }
 
+/* ================= FEATURED PACKAGES ================= */
 
+.featured-section {
+  width: 100%;
+}
 
+.featured-title {
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f5a623;
+}
+
+/* Card */
+.featured-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+/* FireMC colors */
+.featured-card.green {
+  background: #1f3d1f;
+}
+
+.featured-card.blue {
+  background: #1e3a44;
+}
+
+/* Image */
+.featured-card img {
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+}
+
+/* Info */
+.featured-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.prices {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.prices .dollars {
+  background: #f5a623;
+  color: #000;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.prices .coins {
+  background: #2ea3ff;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+/* Buttons */
+.featured-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.info-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background: #ffa500;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #ffb733;
+}
