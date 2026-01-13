@@ -166,10 +166,6 @@
 
 /* ================= FEATURED PACKAGES ================= */
 
-.featured-packages {
-  padding: 20px;
-}
-
 .featured-title {
   font-size: 14px;
   letter-spacing: 0.12em;
@@ -225,4 +221,75 @@
 .currency.coins {
   background: rgba(0, 170, 255, 0.15);
   color: #00aaff;
+}
+
+/* ================= FIREMC FEATURED ================= */
+
+.featured-packages {
+  padding: 0;
+}
+
+/* CARD BASE */
+
+.featured-package {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #1f2026;
+  border-radius: 6px;
+  padding: 12px;
+
+  margin-bottom: 10px;
+}
+
+/* IMAGE */
+
+.featured-package img {
+  width: 48px;
+  height: 48px;
+}
+
+/* INFO */
+
+.fp-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+/* CURRENCIES */
+
+.fp-currencies {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* FIREMC COLOR TAGS */
+
+.fp-dollar {
+  background: rgba(255,170,0,0.18);
+  color: #ffaa00;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.fp-coin {
+  background: rgba(0,170,255,0.18);
+  color: #00aaff;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+/* CARD COLOR BORDERS */
+
+.featured-package.green {
+  border-left: 3px solid #5aff00;
+}
+
+.featured-package.blue {
+  border-left: 3px solid #00c8ff;
 }
