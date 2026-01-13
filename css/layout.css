@@ -33,9 +33,9 @@
   );
 }
 
-/* ================= STORE LAYOUT ================= */
+/* ================= STORE WRAPPER ================= */
 
-.store-layout {
+.store-warpper {
   display: flex;
   width: 100%;
   margin: 0;
@@ -52,7 +52,7 @@
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-  .store-layout {
+  .store-wrapper {
     flex-direction: column;
   }
 
@@ -60,3 +60,4 @@
     padding: 16px;
   }
 }
+
