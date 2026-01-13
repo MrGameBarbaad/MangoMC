@@ -50,12 +50,11 @@
   transform: scale(1.1);
 }
 
-/* ================= CATEGORY ================= */
+/* ================= CATEGORY SIDEBAR ================= */
 
 .category-sidebar {
   width: 260px;
   padding: 16px;
-  padding-bottom: 30px;
   background: #1b1c22;
   border-radius: 6px;
 
@@ -63,80 +62,81 @@
   flex-direction: column;
 }
 
+/* Title */
 .category-title {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #f5a623;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
+/* List */
 .category-list {
   display: flex;
-  flex-direction: column; /* FIXED TYPO */
-  gap: 10px;
-  height: 100%; /* Fill sidebar */
-  flex: 1; /* THIS is the magic */
+  flex-direction: column;
 }
+
+/* ================= CATEGORY ITEM (FireMC Style) ================= */
 
 .category-item {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
 
-  padding: 18px 18px;
-  background: #1f2026;
-  border-radius: 4px;
+  height: 58px;
+  padding: 0 14px;
 
+  background: transparent;
   cursor: pointer;
-  transition: 0.15s ease;
-  justify-content: flex-start;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.15s ease;
 }
 
+/* Icon position (LOCKED — matches red dots) */
 .category-item img {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
+  margin-left: 6px;
+  margin-right: 14px;
   flex-shrink: 0;
 }
 
+/* Text */
 .category-item span {
   font-size: 15px;
   font-weight: 600;
   color: #eaeaea;
 }
 
-/* Hover */
-.category-item:hover {
-  transform: translateY(-2px);
-}
+/* Hover (PC only) */
+@media (hover: hover) {
+  .category-item:hover {
+    background: rgba(255,255,255,0.05);
+  }
 
-.category-item:hover span {
-  color: #ffa500;
-}
-
-/* Left indicator line */
-.category-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  bottom: 6px;
-  width: 3px;
-  background: transparent;
+  .category-item:hover span {
+    color: #ffa500;
+  }
 }
 
 /* Active state */
-.category-item.active::before {
-  background: #ffa500;
+.category-item.active {
+  background: rgba(255,152,0,0.08);
 }
 
 .category-item.active span {
   color: #ffa500;
 }
 
+.category linking for active state */
 .category-item.active img {
   filter: brightness(1.15);
+}
+
+/* Remove divider on last item */
+.category-item:last-child {
+  border-bottom: none;
 }
 
 /* ================= MOBILE ================= */
@@ -147,6 +147,3 @@
     max-width: 360px;
   }
 }
-
-
-
