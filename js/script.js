@@ -1,7 +1,12 @@
 /* ================= HOME BUTTON ================= */
 document.querySelector(".home-button")?.addEventListener("click", (e) => {
   e.preventDefault();
-  window.location.href = "/";
+
+  // Remove active state from all categories
+  document.querySelectorAll(".category-item")
+    .forEach(item => item.classList.remove("active"));
+
+  console.log("Home clicked — category reset");
 });
 
 /* ================= CATEGORY SELECTION ================= */
@@ -12,8 +17,7 @@ document.querySelectorAll(".category-item").forEach(item => {
 
     item.classList.add("active");
 
-    console.log("Category selected:", item.innerText.trim());
-    // later: load category products here
+    console.log("Category selected:", item.dataset.category);
   });
 });
 
