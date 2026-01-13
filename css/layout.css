@@ -37,3 +37,21 @@
 
   pointer-events: none;
 }
+
+.top-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+
+  opacity: 0.15;
+  pointer-events: none;
+}
