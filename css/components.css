@@ -22,14 +22,6 @@
   }
 }
 
-.category-sidebar {
-  width: 260px;
-  background: rgba(18, 18, 24, 0.95);
-  padding: 14px;
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.7);
-}
-
 .category-title {
   font-size: 13px;
   font-weight: 700;
@@ -151,4 +143,12 @@
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+}
+
+.category-sidebar {
+  width: 260px;
+  padding: 16px;
+
+  background: #1b1c22;
+  border-radius: 6px;
 }
