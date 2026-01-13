@@ -50,17 +50,17 @@
   transform: scale(1.1);
 }
 
-/* ================= CATEGORY ================= */
+/* ================= CATEGORY SIDEBAR ================= */
 
 .category-sidebar {
   width: 260px;
   padding: 16px;
-  padding-bottom: 16px;
   background: #1b1c22;
   border-radius: 6px;
 
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -69,29 +69,22 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #f5a623;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-@media (max-width: 768px) {
-  .category-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;                 /* IMPORTANT */
-    gap: 10px;
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-
-/* Each item stretches evenly */
-.category-item {
+/* List */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  box-sizing: border-box;
-  margin-left: 0;
-  margin-right: 0;
-  border-radius: 0;
-  flex: 1;                 /* IMPORTANT */
+}
+
+/* ================= CATEGORY ITEM ================= */
+
+.category-item {
+  position: relative;
+  width: 100%;
   min-height: 58px;
 
   display: flex;
@@ -102,8 +95,9 @@
   background: #1f2026;
   border-radius: 4px;
 
+  box-sizing: border-box;
   cursor: pointer;
-  transition: 0.15s ease;
+  transition: transform 0.15s ease, background 0.15s ease;
 }
 
 /* Icon */
@@ -121,12 +115,15 @@
 }
 
 /* Hover */
-.category-item:hover {
-  transform: translateY(-2px);
-}
+@media (hover: hover) {
+  .category-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.05);
+  }
 
-.category-item:hover span {
-  color: #ffa500;
+  .category-item:hover span {
+    color: #ffa500;
+  }
 }
 
 /* Left indicator */
@@ -154,31 +151,24 @@
   filter: brightness(1.15);
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE FIX ================= */
 
 @media (max-width: 768px) {
+
+  /* Break desktop layout */
+  .store-layout,
+  .store-container,
+  .store-content {
+    display: block !important;
+  }
+
   .category-sidebar {
-    width: 100%;
-    max-width: 360px;
-  }
-}
-
-/* Hover (PC only) */
-@media (hover: hover) {
-  .category-item:hover {
-    background: rgba(255,255,255,0.05);
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 20px;
   }
 
-.category-item:not(:last-child) {
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-@media (max-width: 768px) {
-  .category-item span {
-    display: flex;
-    align-items: center;
+  .category-item {
     width: 100%;
   }
 }
-
-
