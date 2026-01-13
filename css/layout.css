@@ -56,12 +56,6 @@
   pointer-events: none;
 }
 
-.store-layout {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
 @media (max-width: 768px) {
   .store-layout {
     justify-content: center;
@@ -71,4 +65,12 @@
     width: 100%;
     max-width: 360px;
   }
+}
+
+.store-layout {
+  display: flex;
+  justify-content: flex-start;   /* LEFT */
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
