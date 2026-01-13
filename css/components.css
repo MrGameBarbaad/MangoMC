@@ -31,9 +31,9 @@
 }
 
 .category-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: coloum;
+  gap: 10px;
 }
 
 .category-item span {
@@ -152,4 +152,5 @@
   height: 26px;
   flex-shrink: 0;
 }
+
 
