@@ -63,6 +63,10 @@
 }
 
 @media (max-width: 768px) {
+  .store-layout {
+    justify-content: center;
+  }
+
   .category-sidebar {
     width: 100%;
     max-width: 360px;
