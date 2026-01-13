@@ -63,7 +63,6 @@
   padding: 0;
 
   border-radius: 0;        /* IMPORTANT */
-  box-shadow: none;        /* IMPORTANT */
 }
 
 .category-title {
@@ -163,5 +162,6 @@
     margin-bottom: 20px;
   }
 }
+
 
 
