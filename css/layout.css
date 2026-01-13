@@ -3,22 +3,17 @@
 .top-banner {
   position: relative;
   height: 535px;
-
   background:
     linear-gradient(to bottom,
       rgba(11,11,16,0.15),
       rgba(11,11,16,0.95)
     ),
     url("../assets/background.jpg");
-
   background-size: cover;
   background-position: center top;
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 }
 
@@ -39,11 +34,10 @@
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 0;
-  padding-left: 10px;
+  padding: 10px 0 0 10px; /* FireMC-style left gap */
+  box-sizing: border-box;
 }
 
-/* Right side content */
 .store-content {
   flex: 1;
   padding: 24px;
@@ -55,11 +49,10 @@
 @media (max-width: 768px) {
   .store-wrapper {
     flex-direction: column;
+    padding-left: 0;
   }
 
   .store-content {
     padding: 16px;
   }
 }
-
-
