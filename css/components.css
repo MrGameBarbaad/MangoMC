@@ -82,6 +82,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  margin-top: 6px;
 }
 
 /* ================= CATEGORY ITEM ================= */
@@ -107,6 +108,7 @@
 /* First item no top border */
 .category-item:first-child {
   border-top: none;
+  margin-top: 6px;
 }
 
 /* Icon */
@@ -293,3 +295,4 @@
 .featured-package.blue {
   border-left: 3px solid #00c8ff;
 }
+
