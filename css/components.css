@@ -164,18 +164,65 @@
   }
 }
 
+/* ================= FEATURED PACKAGES ================= */
 
+.featured-packages {
+  padding: 20px;
+}
 
+.featured-title {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: #f5a623;
+  margin-bottom: 14px;
+}
 
+/* PACKAGE CARD */
 
+.package-card {
+  display: flex;
+  align-items: center;
+  background: #1f2026;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
 
+.package-icon {
+  width: 56px;
+  height: 56px;
+  margin-right: 14px;
+}
 
+/* PACKAGE INFO */
 
+.package-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
 
+/* CURRENCIES */
 
+.package-currencies {
+  display: flex;
+  gap: 10px;
+}
 
+.currency {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
 
+.currency.dollars {
+  background: rgba(255, 170, 0, 0.15);
+  color: #ffaa00;
+}
 
-
-
-
+.currency.coins {
+  background: rgba(0, 170, 255, 0.15);
+  color: #00aaff;
+}
