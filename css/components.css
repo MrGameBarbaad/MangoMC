@@ -1,5 +1,6 @@
 .banner-logo {
-  width: 170px;
+  .banner-logo {
+  width: min(600px, 80vw);
   animation:
     float 6s ease-in-out infinite,
     pulseGlow 4s ease-in-out infinite;
@@ -28,6 +29,7 @@
     filter: drop-shadow(0 0 8px rgba(255, 165, 40, 0.35));
   }
 }
+
 
 
 
