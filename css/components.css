@@ -58,7 +58,7 @@
     rgba(25,25,35,0.95)
   );
 
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
 
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -113,3 +113,4 @@
   opacity: 1;
   transform: scale(1.1);
 }
+
