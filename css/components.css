@@ -78,10 +78,14 @@
   flex-direction: column;
   flex: 1;                 /* IMPORTANT */
   gap: 10px;
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
 /* Each item stretches evenly */
 .category-item {
+  width: 100%;
+  border-radius: 0;
   flex: 1;                 /* IMPORTANT */
   min-height: 58px;
 
@@ -159,3 +163,4 @@
   .category-item:hover {
     background: rgba(255,255,255,0.05);
   }
+
