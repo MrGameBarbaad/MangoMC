@@ -9,33 +9,14 @@
   will-change: transform, filter;
 }
 
-@keyframes float {
+@keyframes floatPulse {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-16px);
+    transform: translateY(-18px) scale(1.06);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
-
-@keyframes pulseGlow {
-  0% {
-    filter: drop-shadow(0 0 8px rgba(255, 165, 40, 0.35));
-  }
-  50% {
-    filter: drop-shadow(0 0 32px rgba(255, 210, 90, 0.9));
-  }
-  100% {
-    filter: drop-shadow(0 0 8px rgba(255, 165, 40, 0.35));
-  }
-}
-
-
-
-
-
-
-
