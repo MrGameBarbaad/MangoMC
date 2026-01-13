@@ -44,26 +44,6 @@
   padding: 0;
 }
 
-.category-item {
-  display: flex;
-  align-items: center;
-
-  height: 64px;               /* 🔥 THIS IS KEY */
-  padding: 10px 12px;
-  margin-bottom: 10px;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(40,40,50,0.95),
-    rgba(25,25,35,0.95)
-  );
-
-  border-radius: 4px;
-  cursor: pointer;
-
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
 .category-item img {
   width: 42px;               /* 🔥 FORCE ICON SIZE */
   height: 42px;
@@ -81,18 +61,6 @@
 .category-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-
-.category-item.active {
-  background: linear-gradient(
-    to bottom,
-    #f5a623,
-    #d48806
-  );
-}
-
-.category-item.active span {
-  color: #000;
 }
 
 .home-button:hover img {
@@ -130,4 +98,23 @@
 
 .home-button:hover {
   color: #ffa500;
+}
+
+.category-item {
+  background: #1f2026;
+  color: #cfcfcf;
+  transition: 0.2s ease;
+}
+
+.category-item.active {
+  background: #1f2026; /* SAME background */
+}
+
+.category-item.active span {
+  color: #ffa500;
+  font-weight: 600;
+}
+
+.category-item.active img {
+  filter: brightness(1.2);
 }
