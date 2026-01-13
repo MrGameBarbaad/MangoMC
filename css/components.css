@@ -153,4 +153,6 @@
   flex-shrink: 0;
 }
 
-
+.category-item:hover span {
+  color: #ffa500;
+}
