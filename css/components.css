@@ -139,16 +139,16 @@
   filter: brightness(1.15);
 }
 
-.category-item img {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
 .category-sidebar {
   width: 260px;
   padding: 16px;
 
   background: #1b1c22;
   border-radius: 6px;
+}
+
+.category-item img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
