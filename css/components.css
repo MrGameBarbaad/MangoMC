@@ -72,7 +72,8 @@
   display: flex;
   flex-direction: column; /* FIXED TYPO */
   gap: 10px;
-  height: 100%; /* fill sidebar */
+  height: 100%; /* Fill sidebar */
+  flex: 1; /* THIS is the magic */
 }
 
 .category-item {
@@ -142,4 +143,5 @@
     max-width: 360px;
   }
 }
+
 
