@@ -111,8 +111,8 @@
 
 /* Icon */
 .category-item img {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   flex-shrink: 0;
 }
 
@@ -293,5 +293,6 @@
 .featured-package.blue {
   border-left: 3px solid #00c8ff;
 }
+
 
 
