@@ -72,19 +72,24 @@
   margin-bottom: 12px;
 }
 
-/* List fills remaining height */
-.category-list {
-  display: flex;
-  flex-direction: column;
-  flex: 1;                 /* IMPORTANT */
-  gap: 10px;
-  margin-left: -16px;
-  margin-right: -16px;
+@media (max-width: 768px) {
+  .category-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;                 /* IMPORTANT */
+    gap: 10px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 }
 
 /* Each item stretches evenly */
 .category-item {
   width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
   border-radius: 0;
   flex: 1;                 /* IMPORTANT */
   min-height: 58px;
@@ -167,3 +172,4 @@
 .category-item:not(:last-child) {
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
+
