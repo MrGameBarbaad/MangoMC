@@ -100,15 +100,6 @@
   color: #ffa500;
 }
 
-.category-item.active {
-  background: #1f2026; /* SAME background */
-}
-
-.category-item.active span {
-  color: #ffa500;
-  font-weight: 600;
-}
-
 .category-item.active img {
   filter: brightness(1.2);
 }
@@ -144,4 +135,21 @@
   background: transparent;
 
   border-radius: 2px;
+}
+
+.category-item.active {
+  background: #1f2026; /* unchanged */
+}
+
+.category-item.active::before {
+  background: #ffa500;
+}
+
+.category-item.active span {
+  color: #ffa500;
+  font-weight: 600;
+}
+
+.category-item.active img {
+  filter: brightness(1.15);
 }
