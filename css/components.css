@@ -54,36 +54,33 @@
 
 .category-sidebar {
   width: 260px;
-  padding: 16px;
   background: #1b1c22;
   border-radius: 6px;
 
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  overflow: hidden; /* VERY IMPORTANT */
 }
 
-/* Title */
+/* Title (keeps padding) */
 .category-title {
+  padding: 16px 16px 12px;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #f5a623;
-  margin-bottom: 14px;
 }
 
-/* List */
+/* List fills FULL width */
 .category-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 100%;
 }
 
 /* ================= CATEGORY ITEM ================= */
 
 .category-item {
-  position: relative;
   width: 100%;
   min-height: 58px;
 
@@ -93,11 +90,17 @@
 
   padding: 16px;
   background: #1f2026;
-  border-radius: 4px;
 
   box-sizing: border-box;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease;
+  position: relative;
+
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* First item no top border */
+.category-item:first-child {
+  border-top: none;
 }
 
 /* Icon */
@@ -117,7 +120,6 @@
 /* Hover */
 @media (hover: hover) {
   .category-item:hover {
-    transform: translateY(-2px);
     background: rgba(255,255,255,0.05);
   }
 
@@ -126,16 +128,15 @@
   }
 }
 
-/* Left indicator */
+/* Left active bar */
 .category-item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 8px;
-  bottom: 8px;
+  top: 10px;
+  bottom: 10px;
   width: 3px;
   background: transparent;
-  border-radius: 2px;
 }
 
 /* Active */
@@ -147,28 +148,12 @@
   color: #ffa500;
 }
 
-.category-item.active img {
-  filter: brightness(1.15);
-}
-
-/* ================= MOBILE FIX ================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-
-  /* Break desktop layout */
-  .store-layout,
-  .store-container,
-  .store-content {
-    display: block !important;
-  }
-
   .category-sidebar {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto 20px;
-  }
-
-  .category-item {
     width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
