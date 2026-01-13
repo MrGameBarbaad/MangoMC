@@ -157,16 +157,20 @@
   color: #ffa500;
 }
 
-/* ===== MOBILE CATEGORY FIX ===== */
+/* ===== FORCE MOBILE CATEGORY STACK ===== */
 @media (max-width: 768px) {
 
-  .category-list {
-    flex-direction: column;
+  .category-sidebar .category-list {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
     gap: 10px;
   }
 
-  .category-item {
-    width: 100%;
+  .category-sidebar .category-item {
+    display: flex !important;
+    width: 100% !important;
+    align-items: center;
     justify-content: flex-start;
     padding: 16px 18px;
     border-radius: 4px;
