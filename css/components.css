@@ -50,11 +50,12 @@
   transform: scale(1.1);
 }
 
-/* ================= CATEGORY SIDEBAR ================= */
+/* ================= CATEGORY ================= */
 
 .category-sidebar {
   width: 260px;
   padding: 16px;
+  padding-bottom: 16px;
   background: #1b1c22;
   border-radius: 6px;
 
@@ -71,34 +72,35 @@
   margin-bottom: 12px;
 }
 
-/* List */
+/* List fills remaining height */
 .category-list {
   display: flex;
   flex-direction: column;
+  flex: 1;                 /* IMPORTANT */
+  gap: 10px;
 }
 
-/* ================= CATEGORY ITEM (FireMC Style) ================= */
-
+/* Each item stretches evenly */
 .category-item {
+  flex: 1;                 /* IMPORTANT */
+  min-height: 58px;
+
   display: flex;
   align-items: center;
+  gap: 12px;
 
-  height: 58px;
-  padding: 0 14px;
+  padding: 16px;
+  background: #1f2026;
+  border-radius: 4px;
 
-  background: transparent;
   cursor: pointer;
-
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: background 0.15s ease;
+  transition: 0.15s ease;
 }
 
-/* Icon position (LOCKED — matches red dots) */
+/* Icon */
 .category-item img {
-  width: 26px;
-  height: 26px;
-  margin-left: 6px;
-  margin-right: 14px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
 }
 
@@ -109,34 +111,38 @@
   color: #eaeaea;
 }
 
-/* Hover (PC only) */
-@media (hover: hover) {
-  .category-item:hover {
-    background: rgba(255,255,255,0.05);
-  }
-
-  .category-item:hover span {
-    color: #ffa500;
-  }
+/* Hover */
+.category-item:hover {
+  transform: translateY(-2px);
 }
 
-/* Active state */
-.category-item.active {
-  background: rgba(255,152,0,0.08);
+.category-item:hover span {
+  color: #ffa500;
+}
+
+/* Left indicator */
+.category-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: transparent;
+  border-radius: 2px;
+}
+
+/* Active */
+.category-item.active::before {
+  background: #ffa500;
 }
 
 .category-item.active span {
   color: #ffa500;
 }
 
-.category linking for active state */
 .category-item.active img {
   filter: brightness(1.15);
-}
-
-/* Remove divider on last item */
-.category-item:last-child {
-  border-bottom: none;
 }
 
 /* ================= MOBILE ================= */
@@ -147,3 +153,9 @@
     max-width: 360px;
   }
 }
+
+/* Hover (PC only) */
+@media (hover: hover) {
+  .category-item:hover {
+    background: rgba(255,255,255,0.05);
+  }
