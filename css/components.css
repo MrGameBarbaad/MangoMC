@@ -55,11 +55,15 @@
 .category-sidebar {
   width: 260px;
   background: #1b1c22;
-  border-radius: 6px;
 
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* VERY IMPORTANT */
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 0;        /* IMPORTANT */
+  box-shadow: none;        /* IMPORTANT */
 }
 
 /* Title (keeps padding) */
@@ -157,3 +161,4 @@
     margin-bottom: 20px;
   }
 }
+
