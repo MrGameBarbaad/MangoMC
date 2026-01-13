@@ -95,22 +95,39 @@
   color: #000;
 }
 
-.home-button {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  z-index: 5;
-}
-
-.home-button img {
-  width: 26px;
-  height: 26px;
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
 .home-button:hover img {
   opacity: 1;
   transform: scale(1.1);
 }
 
+.home-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #ddd;
+  text-decoration: none;
+
+  z-index: 5;
+  backdrop-filter: blur(4px);
+}
+
+.home-button img {
+  width: 14px;
+  height: 14px;
+}
+
+.home-button:hover {
+  color: #ffa500;
+}
