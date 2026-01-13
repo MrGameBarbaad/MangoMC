@@ -89,20 +89,18 @@
 
 .category-item {
   width: 100%;
-  min-height: 60px;
+  min-height: 58px;
 
   display: flex;
   align-items: center;
   gap: 12px;
 
-  padding: 16px 18px;
+  padding: 16px;
   background: #1f2026;
 
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
-
-  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 /* First item no top border */
@@ -295,4 +293,5 @@
 .featured-package.blue {
   border-left: 3px solid #00c8ff;
 }
+
 
