@@ -159,8 +159,10 @@
 
 /* ===== FORCE MOBILE CATEGORY STACK ===== */
 @media (max-width: 768px) {
+  max-width: 100% !important;
 
   .category-sidebar .category-list {
+    max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
@@ -168,6 +170,7 @@
   }
 
   .category-sidebar .category-item {
+    max-width: 100% !important;
     display: flex !important;
     width: 100% !important;
     align-items: center;
@@ -177,3 +180,4 @@
   }
 
 }
+
