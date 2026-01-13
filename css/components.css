@@ -88,14 +88,14 @@
 
 .category-item {
   width: 100%;
-  min-height: 58px;
+  min-height: 60px;
 
   display: flex;
   align-items: center;
   gap: 12px;
 
-  padding: 16px;
-  background: #1e1f25;
+  padding: 16px 18px;
+  background: #1f2026;
 
   box-sizing: border-box;
   cursor: pointer;
@@ -163,6 +163,7 @@
     margin-bottom: 20px;
   }
 }
+
 
 
 
