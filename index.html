@@ -14,19 +14,12 @@
 <!-- TOP BANNER -->
 <div class="top-banner">
 
-<button class="home-button" id="homeBtn" type="button">
-  <img src="assets/home.png" alt="Home">
-  <span>Home</span>
-</button>
-
-<!-- CART BUTTON -->
-<div class="cart-button" id="cartBtn">
-  <span class="cart-user">Kaal_Warrior's Cart</span>
-  <span class="cart-count" id="cartCount">0</span>
-</div>
+  <button class="home-button" id="homeBtn" type="button">
+    <img src="assets/home.png" alt="Home">
+    <span>Home</span>
+  </button>
 
   <img src="assets/logo.png" class="banner-logo" alt="MangoMC Logo">
-
 </div>
 
 <div class="store-wrapper">
@@ -36,7 +29,7 @@
     <h3 class="category-title">SELECT A CATEGORY</h3>
 
     <ul class="category-list">
-      <li class="category-item">
+      <li class="category-item active">
         <img src="assets/ranks.png">
         <span>Ranks</span>
       </li>
@@ -57,7 +50,6 @@
 
   <!-- MAIN CONTENT -->
   <main class="store-content">
-
     <section class="featured-section">
       <h3 class="featured-title">FEATURED PACKAGES</h3>
 
@@ -72,7 +64,7 @@
         </div>
         <div class="featured-actions">
           <button class="info-btn">Info</button>
-          <button class="cart-btn">Add to Cart</button>
+          <button class="cart-btn" disabled>Coming Soon</button>
         </div>
       </div>
 
@@ -87,74 +79,15 @@
         </div>
         <div class="featured-actions">
           <button class="info-btn">Info</button>
-          <button class="cart-btn">Add to Cart</button>
+          <button class="cart-btn" disabled>Coming Soon</button>
         </div>
       </div>
 
-      <!-- LOGIN / CART MODAL -->
-<div class="overlay hidden" id="overlay">
-
-  <!-- LOGIN MODAL -->
-  <div class="modal hidden" id="loginModal">
-    <h3>Please enter your username to continue</h3>
-    <p class="modal-sub">
-      Usernames can't contain spaces, they can have any letter and number, and they are Case Sensitive.
-    </p>
-
-    <div class="user-preview">
-      <img id="skinPreview" src="https://mc-heads.net/avatar/Steve/64">
-      <input id="usernameInput" placeholder="Username">
-    </div>
-
-    <div class="bedrock-toggle">
-      <span>Bedrock user?</span>
-      <button id="bedrockToggle" class="off">No</button>
-    </div>
-
-    <button class="primary-btn" id="loginBtn">CONTINUE</button>
-  </div>
-
-  <!-- CART MODAL -->
-  <div class="modal hidden" id="cartModal">
-    <div class="cart-header">
-      <img id="cartHead" src="">
-      <span id="cartUsername"></span>
-    </div>
-
-    <div class="currency-toggle">
-      <button class="active">Dollars</button>
-      <button>Coins</button>
-    </div>
-
-    <div class="cart-items" id="cartItems">
-      <p class="empty">EMPTY CART</p>
-    </div>
-
-    <div class="cart-footer">
-      <span>Total Items: <b id="totalItems">0</b></span>
-      <button class="checkout-btn">Checkout</button>
-    </div>
-  </div>
-
-</div>
-
     </section>
-
   </main>
 </div>
-  <script src="js/script.js"></script>
-  <script src="js/categories.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/categories.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
