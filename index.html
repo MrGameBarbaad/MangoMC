@@ -91,6 +91,52 @@
         </div>
       </div>
 
+      <!-- LOGIN / CART MODAL -->
+<div class="overlay hidden" id="overlay">
+
+  <!-- LOGIN MODAL -->
+  <div class="modal hidden" id="loginModal">
+    <h3>Please enter your username to continue</h3>
+    <p class="modal-sub">
+      Usernames can't contain spaces, they can have any letter and number, and they are Case Sensitive.
+    </p>
+
+    <div class="user-preview">
+      <img id="skinPreview" src="https://mc-heads.net/avatar/Steve/64">
+      <input id="usernameInput" placeholder="Username">
+    </div>
+
+    <div class="bedrock-toggle">
+      <span>Bedrock user?</span>
+      <button id="bedrockToggle" class="off">No</button>
+    </div>
+
+    <button class="primary-btn" id="loginBtn">CONTINUE</button>
+  </div>
+
+  <!-- CART MODAL -->
+  <div class="modal hidden" id="cartModal">
+    <div class="cart-header">
+      <img id="cartHead" src="">
+      <span id="cartUsername"></span>
+    </div>
+
+    <div class="currency-toggle">
+      <button class="active">In-game Dollars</button>
+      <button>Coins</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty">EMPTY CART</p>
+    </div>
+
+    <div class="cart-footer">
+      <span>Total Items: <b id="totalItems">0</b></span>
+    </div>
+  </div>
+
+</div>
+
     </section>
 
   </main>
@@ -99,6 +145,7 @@
   <script src="js/categories.js"></script>
 </body>
 </html>
+
 
 
 
