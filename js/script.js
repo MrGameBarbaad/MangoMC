@@ -128,3 +128,9 @@ document.querySelectorAll(".currency-btn").forEach(btn => {
     console.log("Currency selected:", selectedCurrency);
   });
 });
+
+function formatUsername(name, isBedrock) {
+  return isBedrock ? `.${name}` : name;
+}
+
+usernameDisplay.textContent = formatUsername(username, isBedrock);
