@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   homeBtn.addEventListener("click", () => {
     categories.forEach(item => item.classList.remove("active"));
-    categories[0].classList.add("active");
   });
 
   categories.forEach(category => {
