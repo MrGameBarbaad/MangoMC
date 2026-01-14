@@ -28,23 +28,6 @@ document.querySelectorAll(".info-btn").forEach(btn => {
   });
 });
 
-/* ================= ADD TO CART ================= */
-document.querySelectorAll(".cart-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const card = btn.closest(".featured-card");
-    const name = card.querySelector("h4").innerText;
-
-    cart.push(name);
-    updateCartCount();
-
-    console.log("Cart:", cart);
-  });
-});
-
-let user = JSON.parse(localStorage.getItem("user"));
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let bedrock = false;
-
 /* ELEMENTS */
 const overlay = document.getElementById("overlay");
 const loginModal = document.getElementById("loginModal");
@@ -101,16 +84,6 @@ function showCart() {
   document.getElementById("totalItems").innerText = cart.length;
 }
 
-/* ADD TO CART BUTTON*/
-document.querySelectorAll(".cart-btn").forEach(btn => {
-  btn.onclick = () => {
-    const name = btn.closest(".featured-card").querySelector("h4").innerText;
-    cart.push(name);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    document.getElementById("cartCount").innerText = cart.length;
-  };
-});
-
 /* CLOSE OVERLAY */
 overlay.onclick = (e) => {
   if (e.target === overlay) overlay.classList.add("hidden");
@@ -134,3 +107,13 @@ function formatUsername(name, isBedrock) {
 }
 
 usernameDisplay.textContent = formatUsername(username, isBedrock);
+
+/* ADD TO CART BUTTON*/
+document.querySelectorAll(".cart-btn").forEach(btn => {
+  btn.onclick = () => {
+    const name = btn.closest(".featured-card").querySelector("h4").innerText;
+    cart.push(name);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("cartCount").innerText = cart.length;
+  };
+});
