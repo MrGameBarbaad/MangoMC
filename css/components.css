@@ -476,6 +476,11 @@
   color: #aaa;
 }
 
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+}
+
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
@@ -483,6 +488,7 @@
     width: 100%;
   }
 }
+
 
 
 
