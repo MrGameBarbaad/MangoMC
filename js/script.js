@@ -28,9 +28,24 @@ document.querySelectorAll(".info-btn").forEach(btn => {
   });
 });
 
+/* ================= CART STATE ================= */
+
+let cart = [];
+
+/* Update cart count */
+function updateCartCount() {
+  document.getElementById("cartCount").innerText = cart.length;
+}
+
 /* ================= ADD TO CART ================= */
 document.querySelectorAll(".cart-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    alert("Added to cart (Tebex integration next)");
+    const card = btn.closest(".featured-card");
+    const name = card.querySelector("h4").innerText;
+
+    cart.push(name);
+    updateCartCount();
+
+    console.log("Cart:", cart);
   });
 });
