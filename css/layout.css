@@ -22,3 +22,7 @@
     padding: 16px;
   }
 }
+
+.top-banner {
+  min-height: 535px; /* force banner height */
+}
