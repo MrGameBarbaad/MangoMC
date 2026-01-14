@@ -115,3 +115,16 @@ document.querySelectorAll(".cart-btn").forEach(btn => {
 overlay.onclick = (e) => {
   if (e.target === overlay) overlay.classList.add("hidden");
 };
+
+/* ================= CURRENCY TOGGLE ================= */
+document.querySelectorAll(".currency-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".currency-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    const selectedCurrency = btn.dataset.currency;
+    console.log("Currency selected:", selectedCurrency);
+  });
+});
