@@ -49,3 +49,12 @@ document.querySelectorAll(".cart-btn").forEach(btn => {
     console.log("Cart:", cart);
   });
 });
+
+/* ================= CART BUTTON CLICK ================= */
+document.getElementById("cartBtn").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your cart is empty");
+  } else {
+    alert("Cart items:\n\n" + cart.join("\n"));
+  }
+});
