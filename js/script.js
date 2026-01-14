@@ -28,15 +28,6 @@ document.querySelectorAll(".info-btn").forEach(btn => {
   });
 });
 
-/* ================= CART STATE ================= */
-
-let cart = [];
-
-/* Update cart count */
-function updateCartCount() {
-  document.getElementById("cartCount").innerText = cart.length;
-}
-
 /* ================= ADD TO CART ================= */
 document.querySelectorAll(".cart-btn").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -50,11 +41,77 @@ document.querySelectorAll(".cart-btn").forEach(btn => {
   });
 });
 
-/* ================= CART BUTTON CLICK ================= */
-document.getElementById("cartBtn").addEventListener("click", () => {
-  if (cart.length === 0) {
-    alert("Your cart is empty");
+let user = JSON.parse(localStorage.getItem("user"));
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let bedrock = false;
+
+/* ELEMENTS */
+const overlay = document.getElementById("overlay");
+const loginModal = document.getElementById("loginModal");
+const cartModal = document.getElementById("cartModal");
+const usernameInput = document.getElementById("usernameInput");
+const skinPreview = document.getElementById("skinPreview");
+const bedrockToggle = document.getElementById("bedrockToggle");
+
+/* CART BUTTON */
+document.getElementById("cartBtn").onclick = () => {
+  overlay.classList.remove("hidden");
+
+  if (!user) {
+    loginModal.classList.remove("hidden");
+    cartModal.classList.add("hidden");
   } else {
-    alert("Cart items:\n\n" + cart.join("\n"));
+    showCart();
   }
+};
+
+/* LIVE SKIN */
+usernameInput.oninput = () => {
+  skinPreview.src = `https://mc-heads.net/avatar/${usernameInput.value || "Steve"}/64`;
+};
+
+/* BEDROCK TOGGLE */
+bedrockToggle.onclick = () => {
+  bedrock = !bedrock;
+  bedrockToggle.textContent = bedrock ? "Yes" : "No";
+  bedrockToggle.className = bedrock ? "on" : "off";
+};
+
+/* LOGIN */
+document.getElementById("loginBtn").onclick = () => {
+  let name = usernameInput.value.trim();
+  if (!name) return;
+
+  if (bedrock) name = "." + name;
+
+  user = { name };
+  localStorage.setItem("user", JSON.stringify(user));
+
+  loginModal.classList.add("hidden");
+  showCart();
+};
+
+/* SHOW CART */
+function showCart() {
+  cartModal.classList.remove("hidden");
+  document.getElementById("cartUsername").innerText = user.name;
+  document.getElementById("cartHead").src =
+    `https://mc-heads.net/avatar/${user.name.replace(".", "")}/64`;
+
+  document.getElementById("totalItems").innerText = cart.length;
+}
+
+/* ADD TO CART */
+document.querySelectorAll(".cart-btn").forEach(btn => {
+  btn.onclick = () => {
+    const name = btn.closest(".featured-card").querySelector("h4").innerText;
+    cart.push(name);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("cartCount").innerText = cart.length;
+  };
 });
+
+/* CLOSE OVERLAY */
+overlay.onclick = (e) => {
+  if (e.target === overlay) overlay.classList.add("hidden");
+};
