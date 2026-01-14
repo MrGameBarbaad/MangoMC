@@ -3,8 +3,6 @@ document.getElementById("homeBtn")?.addEventListener("click", () => {
   document.querySelectorAll(".category-item")
     .forEach(item => item.classList.remove("active"));
 
-  document.querySelector(".category-item")?.classList.add("active");
-
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
