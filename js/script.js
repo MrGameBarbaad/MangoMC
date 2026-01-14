@@ -101,7 +101,7 @@ function showCart() {
   document.getElementById("totalItems").innerText = cart.length;
 }
 
-/* ADD TO CART */
+/* ADD TO CART BUTTON*/
 document.querySelectorAll(".cart-btn").forEach(btn => {
   btn.onclick = () => {
     const name = btn.closest(".featured-card").querySelector("h4").innerText;
