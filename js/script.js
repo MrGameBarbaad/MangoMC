@@ -117,3 +117,51 @@ document.querySelectorAll(".cart-btn").forEach(btn => {
     document.getElementById("cartCount").innerText = cart.length;
   };
 });
+
+function renderCart() {
+  const totalItems = cart.items.reduce((s, i) => s + i.qty, 0);
+  const totalPrice = cart.items.reduce((s, i) => s + (i.price * i.qty), 0);
+
+  document.querySelector(".cart-count").textContent = totalItems;
+
+  const cartBody = document.querySelector(".cart-body");
+  cartBody.innerHTML = "";
+
+  if (cart.items.length === 0) {
+    cartBody.innerHTML = `<p>EMPTY CART</p>`;
+  } else {
+    cart.items.forEach(item => {
+      cartBody.innerHTML += `
+        <div class="cart-item">
+          <span>${item.name} × ${item.qty}</span>
+          <span>${item.price * item.qty} ${item.currency}</span>
+        </div>
+      `;
+    });
+  }
+
+  document.querySelector(".cart-total-items").textContent = totalItems;
+  document.querySelector(".cart-total-price").textContent = totalPrice;
+}
+renderCart();
+
+function renderUser() {
+  const nameEl = document.querySelector(".cart-username");
+
+  if (!cart.username) {
+    nameEl.textContent = "Guest";
+  } else {
+    nameEl.textContent = cart.isBedrock
+      ? `.${cart.username}`
+      : cart.username;
+  }
+}
+renderUser();
+
+document.querySelector(".checkout-btn").addEventListener("click", () => {
+  cart.items = [];
+  saveCart();
+  renderCart();
+});
+
+window.addEventListener("load", renderCart);
