@@ -489,7 +489,20 @@
   }
 }
 
+.featured-card.yellow {
+  background: linear-gradient(
+    to right,
+    rgba(255, 200, 0, 0.18),
+    #1f2026 35%
+  );
+  border-left: 3px solid #facc15;
+}
 
-
-
-
+.featured-card.dark {
+  background: linear-gradient(
+    to right,
+    rgba(120, 120, 120, 0.18),
+    #1f2026 35%
+  );
+  border-left: 3px solid #9ca3af;
+}
