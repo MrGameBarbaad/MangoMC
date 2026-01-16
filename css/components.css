@@ -92,7 +92,7 @@
 .category-item span {
   font-size: 15px;
   font-weight: 600;
-  color: #ffa500;
+  color: #ffffff;
 }
 
 .category-item:hover {
@@ -509,5 +509,6 @@
   );
   border-left: 3px solid #9ca3af;
 }
+
 
 
