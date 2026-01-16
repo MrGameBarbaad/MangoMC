@@ -29,19 +29,19 @@
     <h3 class="category-title">SELECT A CATEGORY</h3>
 
     <ul class="category-list">
-      <li class="category-item">
+      <li class="category-item" data-category="ranks">
         <img src="assets/ranks.png">
         <span>Ranks</span>
       </li>
-      <li class="category-item">
+      <li class="category-item" data-category="kits">
         <img src="assets/kits.png">
         <span>Kits</span>
       </li>
-      <li class="category-item">
+      <li class="category-item" data-category="coins">
         <img src="assets/coins.png">
         <span>Coins</span>
       </li>
-      <li class="category-item">
+      <li class="category-item" data-category="dollars">
         <img src="assets/dollars.png">
         <span>Dollars</span>
       </li>
@@ -50,7 +50,9 @@
 
   <!-- MAIN CONTENT -->
   <main class="store-content">
-    <section class="featured-section">
+
+    <!-- FEATURED PACKAGES -->
+    <section class="featured-section" id="featured-section">
       <h3 class="featured-title">FEATURED PACKAGES</h3>
 
       <div class="featured-card green">
@@ -64,7 +66,7 @@
         </div>
         <div class="featured-actions">
           <button class="info-btn">Info</button>
-          <button class="cart-btn" disabled>Coming Soon</button>
+          <button class="cart-btn">Coming Soon</button>
         </div>
       </div>
 
@@ -79,7 +81,7 @@
         </div>
         <div class="featured-actions">
           <button class="info-btn">Info</button>
-          <button class="cart-btn" disabled>Coming Soon</button>
+          <button class="cart-btn">Coming Soon</button>
         </div>
       </div>
 
@@ -125,8 +127,81 @@
           <button class="cart-btn">Coming Soon</button>
         </div>
       </div>
-
     </section>
+
+    <!-- RANKS SECTION -->
+    <section class="category-section" id="ranks-section" hidden>
+      <h3 class="featured-title">RANKS</h3>
+
+      <div class="featured-card green">
+        <img src="assets/god.png">
+        <div class="featured-info">
+          <h4>God Rank</h4>
+          <div class="prices">
+            <span class="dollars">250,000 Dollars</span>
+            <span class="coins">25,000 Coins</span>
+          </div>
+        </div>
+        <div class="featured-actions">
+          <button class="info-btn">Info</button>
+          <button class="cart-btn">Coming Soon</button>
+        </div>
+      </div>
+
+      <div class="featured-card yellow">
+        <img src="assets/supreme.png">
+        <div class="featured-info">
+          <h4>Supreme Rank</h4>
+          <div class="prices">
+            <span class="dollars">180,000 Dollars</span>
+            <span class="coins">18,000 Coins</span>
+          </div>
+        </div>
+        <div class="featured-actions">
+          <button class="info-btn">Info</button>
+          <button class="cart-btn">Coming Soon</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COINS SECTION -->
+    <section class="category-section" id="coins-section" hidden>
+      <h3 class="featured-title">COINS</h3>
+
+      <div class="featured-card dark">
+        <img src="assets/15k Coins.png">
+        <div class="featured-info">
+          <h4>15,000 Coins</h4>
+          <div class="prices">
+            <span class="dollars">150,000 Dollars</span>
+          </div>
+        </div>
+        <div class="featured-actions">
+          <button class="info-btn">Info</button>
+          <button class="cart-btn">Coming Soon</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOLLARS SECTION -->
+    <section class="category-section" id="dollars-section" hidden>
+      <h3 class="featured-title">DOLLARS</h3>
+
+      <div class="featured-card blue">
+        <img src="assets/500k Dollars.png">
+        <div class="featured-info">
+          <h4>500,000 Dollars</h4>
+          <div class="prices">
+            <span class="coins">50,000 Coins</span>
+          </div>
+        </div>
+        <div class="featured-actions">
+          <button class="info-btn">Info</button>
+          <button class="cart-btn">Coming Soon</button>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -134,11 +209,3 @@
 <script src="js/categories.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
