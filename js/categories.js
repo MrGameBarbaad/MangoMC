@@ -33,3 +33,7 @@ document.querySelector(".home-button")?.addEventListener("click", () => {
   hideAllSections();
   featuredSection.hidden = false;
 });
+
+document.querySelectorAll('.category-section').forEach(section => {
+  section.hidden = true;
+});
