@@ -22,3 +22,4 @@ document.querySelectorAll(".info-btn").forEach(btn => {
     alert("More details coming soon!");
   });
 });
+
