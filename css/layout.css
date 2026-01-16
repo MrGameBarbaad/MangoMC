@@ -4,6 +4,7 @@
   margin: 0;
   padding: 10px 0 0 10px;
   box-sizing: border-box;
+  align-items: flex-start;
 }
 
 /* SIDEBAR FIX */
@@ -16,6 +17,8 @@
   flex: 1;
   padding: 24px;
   min-height: 400px;
+  position: relative;
+  z-index: 1;
 }
 
 /* MOBILE */
@@ -57,3 +60,4 @@
 
   overflow: hidden;
 }
+
