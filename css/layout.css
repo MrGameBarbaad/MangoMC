@@ -2,8 +2,14 @@
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 10px 0 0 10px; /* FireMC left gap */
+  padding: 10px 0 0 10px;
   box-sizing: border-box;
+}
+
+/* SIDEBAR FIX */
+.category-sidebar {
+  width: 260px;
+  flex-shrink: 0;
 }
 
 .store-content {
@@ -12,10 +18,15 @@
   min-height: 400px;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .store-wrapper {
     flex-direction: column;
     padding-left: 0;
+  }
+
+  .category-sidebar {
+    width: 100%;
   }
 
   .store-content {
@@ -23,6 +34,7 @@
   }
 }
 
+/* BANNER */
 .top-banner {
   position: relative;
   height: 535px;
