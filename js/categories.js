@@ -1,5 +1,6 @@
 const categories = document.querySelectorAll(".category-item");
-const featuredSection = document.querySelector(".featured-section");
+const featuredSection = document.getElementById("featured-section");
+const homeInfo = document.getElementById("home-info");
 
 const sections = {
   Ranks: document.getElementById("ranks-section"),
@@ -7,8 +8,9 @@ const sections = {
   Dollars: document.getElementById("dollars-section"),
 };
 
-function hideAllSections() {
+function hideAll() {
   featuredSection.hidden = true;
+  homeInfo.hidden = true;
   Object.values(sections).forEach(sec => sec.hidden = true);
 }
 
@@ -19,7 +21,7 @@ categories.forEach(category => {
 
     const name = category.innerText.trim();
 
-    hideAllSections();
+    hideAll();
 
     if (sections[name]) {
       sections[name].hidden = false;
@@ -27,13 +29,10 @@ categories.forEach(category => {
   });
 });
 
-// HOME BUTTON RESET
-document.querySelector(".home-button")?.addEventListener("click", () => {
+/* HOME BUTTON */
+document.getElementById("homeBtn").addEventListener("click", () => {
   categories.forEach(c => c.classList.remove("active"));
-  hideAllSections();
+  hideAll();
   featuredSection.hidden = false;
-});
-
-document.querySelectorAll('.category-section').forEach(section => {
-  section.hidden = true;
+  homeInfo.hidden = false;
 });
