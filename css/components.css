@@ -49,6 +49,9 @@
   background: #1f2026;
   display: flex;
   flex-direction: column;
+
+  /* FIX HEIGHT */
+  align-self: flex-start;
 }
 
 .category-title {
@@ -506,3 +509,4 @@
   );
   border-left: 3px solid #9ca3af;
 }
+
