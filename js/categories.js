@@ -10,9 +10,9 @@ const categorySections = document.querySelectorAll(".category-section");
    HELPERS
 ------------------------------ */
 
-function hideAllCategories() {
+function hideAllSections() {
   categorySections.forEach(section => {
-    section.classList.remove("active");
+    section.hidden = true;
   });
 }
 
@@ -28,23 +28,23 @@ function clearCategorySelection() {
 
 categoryItems.forEach(item => {
   item.addEventListener("click", () => {
-    const target = item.dataset.category; // ranks, coins, dollars
+    const target = item.dataset.category; // example: "ranks"
 
-    // UI reset
+    // reset UI
     clearCategorySelection();
-    hideAllCategories();
+    hideAllSections();
 
     // hide home content
-    homeInfo.style.display = "none";
-    featured.style.display = "none";
+    homeInfo.hidden = true;
+    featured.hidden = true;
 
-    // activate sidebar
+    // activate sidebar item
     item.classList.add("active");
 
-    // show correct section
+    // show correct category section
     const section = document.getElementById(`${target}-section`);
     if (section) {
-      section.classList.add("active");
+      section.hidden = false;
     }
   });
 });
@@ -55,8 +55,9 @@ categoryItems.forEach(item => {
 
 homeBtn.addEventListener("click", () => {
   clearCategorySelection();
-  hideAllCategories();
+  hideAllSections();
 
-  homeInfo.style.display = "block";
-  featured.style.display = "block";
+  // show home content
+  homeInfo.hidden = false;
+  featured.hidden = false;
 });
