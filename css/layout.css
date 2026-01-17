@@ -96,9 +96,10 @@
 }
 
 .package-title {
+  text-align: center;
+  width: 100%;
+  display: block;
   color: #ffffff;
-  font-size: 14px;
-  margin-top: 10px;
   font-weight: 600;
 }
 
@@ -151,6 +152,7 @@
   color: #ff9800;
   font-weight: bold;
 }
+
 
 
 
