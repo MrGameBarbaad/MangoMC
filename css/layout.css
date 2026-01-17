@@ -104,10 +104,11 @@
 }
 
 .package-price {
-  color: #ffb300;
+  color: #fb301;
   font-size: 12px;
   margin: 6px 0 10px;
   text-align: center;
+  font-weight: 600;
 }
 
 .package-actions {
@@ -152,6 +153,7 @@
   color: #ff9800;
   font-weight: bold;
 }
+
 
 
 
