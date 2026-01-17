@@ -16,9 +16,8 @@
 .store-content {
   flex: 1;
   padding: 24px;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
+  min-height: 600px;      /* force visible area */
+  display: block;         /* prevent flex collapse */
 }
 
 /* MOBILE */
@@ -33,7 +32,10 @@
   }
 
   .store-content {
-    padding: 16px;
+    flex: 1;
+    padding: 24px;
+    min-height: 600px;      /* force visible area */
+    display: block;         /* prevent flex collapse */
   }
 }
 
@@ -121,3 +123,4 @@
 .category-section {
   padding-bottom: 80px;
 }
+
