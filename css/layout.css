@@ -122,5 +122,9 @@
 
 .category-section {
   padding-bottom: 80px;
+  display: none;
 }
 
+.category-section.active {
+  display: block;
+}
