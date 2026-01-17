@@ -118,7 +118,7 @@
 }
 
 .info-btn {
-  background: #2196f3;
+  background: #1e90ff;
   border: none;
   color: #ffffff;
   width: 32px;
@@ -154,14 +154,7 @@
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.info-btn:hover,
+button.info:hover {
+  background: #187bcd;
+}
