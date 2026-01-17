@@ -51,3 +51,25 @@ homeBtn.addEventListener("click", () => {
   homeInfo.style.display = "block";
   featured.style.display = "block";
 });
+
+categoryItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const target = item.dataset.category;
+
+    // hide home
+    homeInfo.style.display = "none";
+    featured.style.display = "none";
+
+    // reset categories
+    categories.forEach(section => {
+      section.classList.remove("active");
+    });
+
+    // activate selected
+    document.getElementById(target).classList.add("active");
+
+    // sidebar highlight
+    categoryItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
