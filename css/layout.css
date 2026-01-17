@@ -110,7 +110,7 @@
 
 .package-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   justify-content: center;
 }
 
@@ -118,9 +118,11 @@
   background: #2196f3;
   border: none;
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  font-size: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .cart-btn {
@@ -146,6 +148,7 @@
   font-weight: bold;
   margin: 0 4px;
 }
+
 
 
 
