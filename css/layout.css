@@ -21,7 +21,7 @@
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .store-wrapper {
     flex-direction: column;
     padding-left: 0;
@@ -38,7 +38,7 @@
     display: block;         /* prevent flex collapse */
   }
 
-  .packages-grid {
+  .package-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -75,7 +75,7 @@
   overflow: hidden;
 }
 
-.packages-grid {
+.package-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
@@ -138,6 +138,7 @@
 .category-section.active {
   display: block;
 }
+
 
 
 
