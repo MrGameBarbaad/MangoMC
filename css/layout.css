@@ -48,10 +48,6 @@
     background: #1c1c23;
     border-radius: 10px;
     padding: 14px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -164,4 +160,5 @@
 button.info:hover {
   background: #187bcd;
 }
+
 
