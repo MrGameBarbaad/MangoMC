@@ -125,11 +125,12 @@
 }
 
 .category-section {
-  padding-bottom: 80px;
   display: none;
+  margin-top: 20px;
 }
 
 .category-section.active {
   display: block;
 }
+
 
