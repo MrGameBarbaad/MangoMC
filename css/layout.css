@@ -48,6 +48,7 @@
     background: #1c1c23;
     border-radius: 10px;
     padding: 14px;
+    text-align: center;
   }
 }
 
@@ -95,9 +96,10 @@
 }
 
 .package-title {
-  color: #ff9800;
+  color: #ffb300;
   font-size: 14px;
-  margin: 6px 0;
+  margin: 10px 0 6px;
+  font-weight: bold;
 }
 
 .package-price {
@@ -138,6 +140,7 @@
 .category-section.active {
   display: block;
 }
+
 
 
 
