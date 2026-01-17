@@ -37,6 +37,10 @@
     min-height: 600px;      /* force visible area */
     display: block;         /* prevent flex collapse */
   }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* BANNER */
@@ -128,3 +132,4 @@
 .category-section.active {
   display: block;
 }
+
