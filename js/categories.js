@@ -1,6 +1,8 @@
 const categories = document.querySelectorAll(".category-item");
-const featuredSection = document.getElementById("featured-section");
+const featured = document.getElementById("featured-section");
 const homeInfo = document.getElementById("home-info");
+const homeBtn = document.getElementById("homeBtn");
+const categoryItems = document.querySelectorAll(".category-item");
 
 const sections = {
   Ranks: document.getElementById("ranks-section"),
@@ -35,4 +37,17 @@ document.getElementById("homeBtn").addEventListener("click", () => {
   hideAll();
   featuredSection.hidden = false;
   homeInfo.hidden = false;
+});
+
+homeBtn.addEventListener("click", () => {
+  categories.forEach(section => {
+    section.classList.remove("active"};
+});
+
+  categoryItems.forEach(item => {
+    item.classList.remove("active");
+});
+
+  homeInfo.style.display = "block";
+  featured.style.display = "block";
 });
