@@ -96,10 +96,10 @@
 }
 
 .package-title {
-  color: #ffb300;
+  color: #ffffff;
   font-size: 14px;
-  margin: 10px 0 6px;
-  font-weight: bold;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 .package-price {
@@ -151,6 +151,7 @@
   font-weight: bold;
   margin: 0 4px;
 }
+
 
 
 
