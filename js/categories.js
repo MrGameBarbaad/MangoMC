@@ -1,75 +1,62 @@
-const categories = document.querySelectorAll(".category-item");
-const featured = document.getElementById("featured-section");
-const homeInfo = document.getElementById("home-info");
-const homeBtn = document.getElementById("homeBtn");
 const categoryItems = document.querySelectorAll(".category-item");
+const homeBtn = document.getElementById("homeBtn");
 
-const sections = {
-  Ranks: document.getElementById("ranks-section"),
-  Coins: document.getElementById("coins-section"),
-  Dollars: document.getElementById("dollars-section"),
-};
+const homeInfo = document.getElementById("home-info");
+const featured = document.getElementById("featured-section");
 
-function hideAll() {
-  featuredSection.hidden = true;
-  homeInfo.hidden = true;
-  Object.values(sections).forEach(sec => sec.hidden = true);
+const categorySections = document.querySelectorAll(".category-section");
+
+/* -----------------------------
+   HELPERS
+------------------------------ */
+
+function hideAllCategories() {
+  categorySections.forEach(section => {
+    section.classList.remove("active");
+  });
 }
 
-categories.forEach(category => {
-  category.addEventListener("click", () => {
-    categories.forEach(c => c.classList.remove("active"));
-    category.classList.add("active");
+function clearCategorySelection() {
+  categoryItems.forEach(item => {
+    item.classList.remove("active");
+  });
+}
 
-    const name = category.innerText.trim();
+/* -----------------------------
+   CATEGORY CLICK
+------------------------------ */
 
-    hideAll();
+categoryItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const target = item.dataset.category; // ranks, coins, dollars
 
-    if (sections[name]) {
-      sections[name].hidden = false;
+    // UI reset
+    clearCategorySelection();
+    hideAllCategories();
+
+    // hide home content
+    homeInfo.style.display = "none";
+    featured.style.display = "none";
+
+    // activate sidebar
+    item.classList.add("active");
+
+    // show correct section
+    const section = document.getElementById(`${target}-section`);
+    if (section) {
+      section.classList.add("active");
     }
   });
 });
 
-/* HOME BUTTON */
-document.getElementById("homeBtn").addEventListener("click", () => {
-  categories.forEach(c => c.classList.remove("active"));
-  hideAll();
-  featuredSection.hidden = false;
-  homeInfo.hidden = false;
-});
+/* -----------------------------
+   HOME BUTTON
+------------------------------ */
 
 homeBtn.addEventListener("click", () => {
-  categories.forEach(section => {
-    section.classList.remove("active"};
-});
-
-  categoryItems.forEach(item => {
-    item.classList.remove("active");
-});
+  clearCategorySelection();
+  hideAllCategories();
 
   homeInfo.style.display = "block";
   featured.style.display = "block";
-});
-
-categoryItems.forEach(item => {
-  item.addEventListener("click", () => {
-    const target = item.dataset.category;
-
-    // hide home
-    homeInfo.style.display = "none";
-    featured.style.display = "none";
-
-    // reset categories
-    categories.forEach(section => {
-      section.classList.remove("active");
-    });
-
-    // activate selected
-    document.getElementById(target).classList.add("active");
-
-    // sidebar highlight
-    categoryItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
-  });
 });
