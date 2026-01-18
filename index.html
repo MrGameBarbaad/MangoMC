@@ -543,8 +543,22 @@
 
 <script src="js/script.js"></script>
 <script src="js/categories.js"></script>
+<script>
+  document.getElementById("copyIp").addEventListener("click", () => {
+    const ip = "play.mangomc.net";
+
+    navigator.clipboard.writeText(ip).then(() => {
+      const el = document.querySelector("#copyIp .sub");
+      el.textContent = "COPIED!";
+      setTimeout(() => {
+        el.textContent = "CLICK TO COPY";
+      }, 1500);
+    });
+  });
+</script>
 </body>
 </html>
+
 
 
 
