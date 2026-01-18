@@ -286,11 +286,6 @@ button.info:hover {
   border-radius: 12px;
 }
 
-/* Discord blue accent */
-.action-box.discord .action-title {
-  color: #7289da;
-}
-
 .banner-wrapper {
   position: relative;
 }
@@ -309,6 +304,7 @@ button.info:hover {
   text-decoration: none;
   box-shadow: none;
   border: none;
+  font-weight: 700;
 }
 
 /* discord stays right automatically */
@@ -317,6 +313,7 @@ button.info:hover {
   flex-direction: row-reverse;
   width: 38px;
   height: 38px;
+  colour: #f5a623;
 }
 
 .banner-actions {
@@ -334,6 +331,7 @@ button.info:hover {
   padding: 0 16px;
   z-index: 5;
 }
+
 
 
 
