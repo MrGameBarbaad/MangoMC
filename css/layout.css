@@ -294,6 +294,7 @@ button.info:hover {
 
 /* container that sits ON the banner */
 .banner-actions {
+  transform: translateY(6px);
   position: absolute;
   bottom: 14px;
   left: 14px;
@@ -322,3 +323,4 @@ button.info:hover {
 .action-box.discord {
   margin-left: auto;
 }
+
