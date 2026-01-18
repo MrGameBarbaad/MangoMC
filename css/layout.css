@@ -106,7 +106,7 @@
 }
 
 .package-price {
-  color: #fb301;
+  color: #f5a623;
   font-size: 12px;
   margin: 6px 0 10px;
   text-align: center;
@@ -160,6 +160,7 @@
 button.info:hover {
   background: #187bcd;
 }
+
 
 
 
