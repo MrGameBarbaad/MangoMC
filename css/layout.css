@@ -299,11 +299,13 @@ button.info:hover {
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  background: #1f2126;
+  background: transparent;
   border-radius: 10px;
   min-width: 210px;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: none;
+  border: none;
 }
 
 /* discord stays right automatically */
@@ -326,3 +328,4 @@ button.info:hover {
   padding: 0 16px;
   z-index: 5;
 }
+
