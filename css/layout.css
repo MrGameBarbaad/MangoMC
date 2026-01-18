@@ -251,6 +251,8 @@ button.info:hover {
 .action-icon {
   width: 34px;
   height: 34px;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .action-text {
@@ -312,6 +314,7 @@ button.info:hover {
 /* discord stays right automatically */
 .action-box.discord {
   margin-left: auto;
+  flex-direction: row-reverse;
 }
 
 .banner-actions {
@@ -329,5 +332,6 @@ button.info:hover {
   padding: 0 16px;
   z-index: 5;
 }
+
 
 
