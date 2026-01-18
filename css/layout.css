@@ -237,5 +237,66 @@ button.info:hover {
   color: #fff;
 }
 
+.top-actions {
+  display: flex;
+  gap: 14px;
+  margin: 14px 0 18px 0;
+  align-items: center;
+}
 
+.action-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #1f2126;
+  border-radius: 10px;
+  min-width: 210px;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.action-box:hover {
+  background: #262930;
+}
+
+.action-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.action-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f5a623; /* FireMC orange */
+}
+
+.action-sub {
+  font-size: 11px;
+  color: #9aa0a6;
+  font-weight: 600;
+}
+
+.action-count {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: #f5a623;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+/* Discord blue accent */
+.action-box.discord .action-title {
+  color: #7289da;
+}
