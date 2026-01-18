@@ -292,19 +292,6 @@ button.info:hover {
   position: relative;
 }
 
-/* container that sits ON the banner */
-.banner-actions {
-  transform: translateY(6px);
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  right: 14px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* keep original look */
 .action-box {
   position: relative;
@@ -324,3 +311,18 @@ button.info:hover {
   margin-left: auto;
 }
 
+.banner-actions {
+  position: relative;
+  margin-top: -52px; /* pulls it into banner area */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1200px; /* SAME width as your page content */
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 16px;
+  z-index: 5;
+}
