@@ -334,11 +334,6 @@ button.info:hover {
   z-index: 5;
 }
 
-.action-box {
-  position: absolute;
-  bottom: 20px;
-}
-
 .action-box.minecraft {
   left: 16px;
 }
@@ -346,4 +341,5 @@ button.info:hover {
 .action-box.discord {
   right: 16px;
 }
+
 
