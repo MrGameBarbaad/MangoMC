@@ -334,10 +334,6 @@ button.info:hover {
   z-index: 5;
 }
 
-.banner {
-  position: relative;
-}
-
 .action-box {
   position: absolute;
   bottom: 20px;
@@ -350,3 +346,4 @@ button.info:hover {
 .action-box.discord {
   right: 16px;
 }
+
