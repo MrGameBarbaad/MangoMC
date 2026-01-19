@@ -552,8 +552,19 @@
     }, 1500);
   });
 </script>
+<script> fetch("https://api.mcsrvstat.us/2/mangomc.info.gf")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("mc-count").innerText =
+      data.players?.online ?? "0";
+  })
+  .catch(() => {
+    document.getElementById("mc-count").innerText = "0";
+  });
+</script>
 </body>
 </html>
+
 
 
 
