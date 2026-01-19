@@ -24,7 +24,7 @@
 
 <div class="banner-actions">
   <div class="action-box ip-copy" id="copyIp">
-    <span id="mc-count">...</span>
+    <span class="action-count">...</span>
     <img src="assets/ipcopy.png" class="action-icon" />
     <div class="action-text">
       <div class="action-title">MangoMC.info.gf</div>
@@ -38,7 +38,7 @@
   target="_blank"
   rel="noopener"
   >
-    <span class="action-count">5,675</span>
+    <span class="action-count">...</span>
     <img src="assets/discord.png" class="action-icon" />
     <div class="action-text">
       <div class="action-title">DISCORD SERVER</div>
@@ -552,18 +552,9 @@
     }, 1500);
   });
 </script>
-<script> fetch("https://api.mcsrvstat.us/2/mangomc.info.gf")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("mc-count").innerText =
-      data.players?.online ?? "0";
-  })
-  .catch(() => {
-    document.getElementById("mc-count").innerText = "0";
-  });
-</script>
 </body>
 </html>
+
 
 
 
