@@ -1,46 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const categoryItems = document.querySelectorAll(".category-item");
-  const categorySections = document.querySelectorAll(".category-section");
-  const homeInfo = document.getElementById("home-info");
-  const featured = document.getElementById("featured-section");
-  const homeBtn = document.getElementById("homeBtn");
+const categoryItems = document.querySelectorAll(".category-item");
+const homeBtn = document.getElementById("homeBtn");
 
-  // DEFAULT STATE (HOME)
-  categorySections.forEach(section => section.classList.add("hidden"));
-  if (featured) featured.classList.remove("hidden");
-  if (homeInfo) homeInfo.classList.remove("hidden");
+const homeInfo = document.getElementById("home-info");
+const featured = document.getElementById("featured-section");
 
-  // CATEGORY CLICK
+const categorySections = document.querySelectorAll(".category-section");
+
+/* -----------------------------
+   HELPERS
+------------------------------ */
+
+function hideAllCategories() {
+  categorySections.forEach(section => {
+    section.classList.add("hidden");
+  });
+}
+
+function clearCategorySelection() {
   categoryItems.forEach(item => {
-    item.addEventListener("click", () => {
-      const target = item.dataset.category;
-
-      // Active style
-      categoryItems.forEach(i => i.classList.remove("active"));
-      item.classList.add("active");
-
-      // Hide home
-      if (homeInfo) homeInfo.classList.add("hidden");
-
-      // Hide all sections
-      categorySections.forEach(section => section.classList.add("hidden"));
-
-      // Show selected section
-      const section = document.getElementById(`${target}-section`);
-      if (section) section.classList.remove("hidden");
-    });
+    item.classList.remove("active");
   });
+}
 
-  // HOME BUTTON
-  homeBtn.addEventListener("click", () => {
-    // Remove category highlight
-    categoryItems.forEach(i => i.classList.remove("active"));
+/* -----------------------------
+   CATEGORY CLICK
+------------------------------ */
 
-    // Hide all category sections
-    categorySections.forEach(section => section.classList.add("hidden"));
+categoryItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const target = item.dataset.category; // ranks / coins / dollars
 
-    // Show home + featured
-    if (featured) featured.classList.remove("hidden");
-    if (homeInfo) homeInfo.classList.remove("hidden");
+    // reset UI
+    clearCategorySelection();
+    hideAllCategories();
+
+    // hide home content
+    homeInfo.classList.add("hidden");
+    featured.classList.add("hidden");
+
+    // activate sidebar
+    item.classList.add("active");
+
+    // show correct category
+    const section = document.getElementById(`${target}-section`);
+    if (section) {
+      section.classList.remove("hidden");
+    }
   });
+});
+
+/* -----------------------------
+   HOME BUTTON
+------------------------------ */
+
+homeBtn.addEventListener("click", () => {
+  clearCategorySelection();
+  hideAllCategories();
+
+  featured.classList.remove("hidden");
+  homeInfo.classList.remove("hidden");
 });
