@@ -150,6 +150,8 @@
 
 .category-section {
   margin-top: 20px;
+  display: block !important;
+  border: 2px solid red;
 }
 
 .category-section.hidden {
@@ -425,4 +427,3 @@ button.info:hover {
 .hidden {
   display: none !important;
 }
-
