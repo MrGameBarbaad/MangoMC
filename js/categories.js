@@ -1,56 +1,31 @@
-const categoryItems = document.querySelectorAll(".category-item");
-const sections = document.querySelectorAll(".category-section");
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryItems = document.querySelectorAll(".category-item");
+  const categorySections = document.querySelectorAll(".category-section");
+  const homeInfo = document.getElementById("home-info");
 
-// Show HOME by default
-sections.forEach(section => section.classList.remove("active", "show"));
+  categoryItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const target = item.dataset.category;
 
-function showCategory(id) {
-  sections.forEach(section => {
-    section.classList.remove("show");
+      // Active highlight
+      categoryItems.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
 
-    setTimeout(() => {
-      section.classList.remove("active");
-    }, 200);
-  });
+      // Hide home info
+      if (homeInfo) {
+        homeInfo.classList.add("hidden");
+      }
 
-  const target = document.getElementById(id);
-  if (!target) return;
+      // Hide all category sections
+      categorySections.forEach(section => {
+        section.classList.add("hidden");
+      });
 
-  target.classList.add("active");
-
-  setTimeout(() => {
-    target.classList.add("show");
-  }, 20);
-}
-
-// Sidebar click
-categoryItems.forEach(item => {
-  item.addEventListener("click", () => {
-    categoryItems.forEach(i => i.classList.remove("active"));
-    item.classList.add("active");
-
-    const category = item.dataset.category;
-    showCategory(`${category}-section`);
+      // Show selected category
+      const activeSection = document.getElementById(`${target}-section`);
+      if (activeSection) {
+        activeSection.classList.remove("hidden");
+      }
+    });
   });
 });
-
-const homeInfo = document.getElementById("home-info");
-const homeBtn = document.getElementById("homeBtn");
-
-if (homeBtn) {
-  homeBtn.addEventListener("click", () => {
-    categoryItems.forEach(i => i.classList.remove("active"));
-
-    sections.forEach(section => {
-      section.classList.remove("show");
-      setTimeout(() => section.classList.remove("active"), 200);
-    });
-
-    homeInfo.style.display = "block";
-    homeInfo.style.opacity = "0";
-
-    setTimeout(() => {
-      homeInfo.style.opacity = "1";
-    }, 20);
-  });
-}
