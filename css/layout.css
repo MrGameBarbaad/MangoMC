@@ -28,7 +28,8 @@
   }
 
   .category-sidebar {
-    width: 100%;
+    width: 260px;
+    flex-shrink: 0;
   }
 
   .store-content {
@@ -407,5 +408,8 @@ button.info:hover {
   margin-top: 20px;
 }
 
-
-
+.main-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
