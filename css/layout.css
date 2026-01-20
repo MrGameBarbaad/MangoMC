@@ -356,10 +356,9 @@ button.info:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #1c1c1c;
-  padding: 10px 14px;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  background: transparent;
+  padding: 6px 8px;
+  box-shadow: none;
 }
 
 /* Bubble icon */
@@ -406,3 +405,4 @@ button.info:hover {
 .store-info {
   margin-top: 20px;
 }
+
