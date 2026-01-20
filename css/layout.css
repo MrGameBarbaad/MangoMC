@@ -371,7 +371,8 @@ button.info:hover {
 .bubble-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
+  font-family: inherit;
 }
 
 /* Orange text */
@@ -405,5 +406,6 @@ button.info:hover {
 .store-info {
   margin-top: 20px;
 }
+
 
 
