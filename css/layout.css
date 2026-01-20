@@ -149,8 +149,11 @@
 }
 
 .category-section {
-  display: none;
   margin-top: 20px;
+}
+
+.category-section.hidden {
+  display: none;
 }
 
 .category-section.active {
@@ -422,3 +425,4 @@ button.info:hover {
 .hidden {
   display: none !important;
 }
+
