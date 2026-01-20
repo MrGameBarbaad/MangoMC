@@ -149,7 +149,8 @@
 }
 
 .category-section {
-  margin-top: 20px;
+  display: none;
+  opacity: 0;
 }
 
 .category-section.hidden {
@@ -158,6 +159,8 @@
 
 .category-section.active {
   display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .package-price span {
@@ -418,4 +421,5 @@ button.info:hover {
   align-items: flex-start;
   margin-top: 40px;
 }
+
 
