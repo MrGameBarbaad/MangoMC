@@ -1,37 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const categories = document.querySelectorAll(".category-item");
-  const sections = document.querySelectorAll(".category-section");
-  const homeInfo = document.getElementById("home-info");
-  const featured = document.getElementById("featured-section");
-  const homeBtn = document.getElementById("homeBtn");
+const categoryItems = document.querySelectorAll(".category-item");
+const homeBtn = document.getElementById("homeBtn");
 
-  // Hide all category sections on load
-  sections.forEach(section => section.style.display = "none");
+const homeInfo = document.getElementById("home-info");
+const featured = document.getElementById("featured-section");
+const categorySections = document.querySelectorAll(".category-section");
 
-  // CATEGORY CLICK
-  categories.forEach(item => {
-    item.addEventListener("click", () => {
-      const category = item.dataset.category; // ← THIS IS THE FIX
+/* Helpers */
+function hideAllSections() {
+  categorySections.forEach(sec => sec.classList.remove("active"));
+}
 
-      // Hide home content
-      homeInfo.style.display = "none";
-      featured.style.display = "none";
+function clearActiveCategories() {
+  categoryItems.forEach(item => item.classList.remove("active"));
+}
 
-      // Hide all category sections
-      sections.forEach(section => {
-        section.style.display = "none";
-      });
+/* Category click */
+categoryItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const target = item.dataset.category;
 
-      // Show selected category
-      const active = document.getElementById(`${category}-section`);
-      if (active) active.style.display = "block";
-    });
+    clearActiveCategories();
+    hideAllSections();
+
+    homeInfo.style.display = "none";
+    featured.style.display = "none";
+
+    item.classList.add("active");
+
+    const section = document.getElementById(`${target}-section`);
+    if (section) section.classList.add("active");
   });
+});
 
-  // HOME BUTTON
-  homeBtn.addEventListener("click", () => {
-    sections.forEach(section => section.style.display = "none");
-    homeInfo.style.display = "block";
-    featured.style.display = "block";
-  });
+/* Home button */
+homeBtn.addEventListener("click", () => {
+  clearActiveCategories();
+  hideAllSections();
+
+  homeInfo.style.display = "block";
+  featured.style.display = "block";
 });
