@@ -419,7 +419,6 @@ button.info:hover {
   align-items: flex-start;
 }
 
-
-
-
-
+.hidden {
+  display: none;
+}
