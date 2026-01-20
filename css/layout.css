@@ -400,3 +400,9 @@ button.info:hover {
 .main-content {
   margin-top: 40px;
 }
+
+.categories,
+.featured-packages,
+.store-info {
+  margin-top: 20px;
+}
