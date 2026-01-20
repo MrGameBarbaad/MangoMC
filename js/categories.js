@@ -1,42 +1,35 @@
 const categoryItems = document.querySelectorAll(".category-item");
-const homeBtn = document.getElementById("homeBtn");
+const sections = document.querySelectorAll(".category-section");
 
-const homeInfo = document.getElementById("home-info");
-const featured = document.getElementById("featured-section");
-const categorySections = document.querySelectorAll(".category-section");
+// Show HOME by default
+sections.forEach(section => section.classList.remove("active", "show"));
 
-/* Helpers */
-function hideAllSections() {
-  categorySections.forEach(sec => sec.classList.remove("active"));
+function showCategory(id) {
+  sections.forEach(section => {
+    section.classList.remove("show");
+
+    setTimeout(() => {
+      section.classList.remove("active");
+    }, 200);
+  });
+
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  target.classList.add("active");
+
+  setTimeout(() => {
+    target.classList.add("show");
+  }, 20);
 }
 
-function clearActiveCategories() {
-  categoryItems.forEach(item => item.classList.remove("active"));
-}
-
-/* Category click */
+// Sidebar click
 categoryItems.forEach(item => {
   item.addEventListener("click", () => {
-    const target = item.dataset.category;
-
-    clearActiveCategories();
-    hideAllSections();
-
-    homeInfo.style.display = "none";
-    featured.style.display = "none";
-
+    categoryItems.forEach(i => i.classList.remove("active"));
     item.classList.add("active");
 
-    const section = document.getElementById(`${target}-section`);
-    if (section) section.classList.add("active");
+    const category = item.dataset.category;
+    showCategory(`${category}-section`);
   });
-});
-
-/* Home button */
-homeBtn.addEventListener("click", () => {
-  clearActiveCategories();
-  hideAllSections();
-
-  homeInfo.style.display = "block";
-  featured.style.display = "block";
 });
