@@ -448,4 +448,9 @@ button.info:hover {
   z-index: 1000;
 }
 
+.discord img,
+.discord svg {
+  width: 20px;
+  height: 20px;
+}
 
