@@ -408,10 +408,6 @@ button.info:hover {
   font-weight: 400;
 }
 
-.main-content {
-  margin-top: 40px;
-}
-
 .categories,
 .featured-packages,
 .store-info {
@@ -422,8 +418,5 @@ button.info:hover {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-}
-
-.hidden {
-  display: none !important;
+  margin-top: 40px;
 }
