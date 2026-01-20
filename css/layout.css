@@ -420,5 +420,5 @@ button.info:hover {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
