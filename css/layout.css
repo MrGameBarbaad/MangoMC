@@ -425,16 +425,19 @@ button.info:hover {
 /* Discord button – fixed position */
 .discord {
   position: fixed;
-  right: 12px;
-  bottom: 200px;
+  right: 20px;
+  left: auto;
+  bottom: 800px;
   z-index: 1000;
 }
 
 /* Mobile spacing fix */
 @media (max-width: 768px) {
   .discord {
-    right: 10px;
-    bottom: 200px;
+    right: 20px;
+    left: auto;
+    position:fixed;
+    bottom: 800px;
   }
 }
 
@@ -444,4 +447,5 @@ button.info:hover {
   bottom: 60px; /* sits above Discord */
   z-index: 1000;
 }
+
 
