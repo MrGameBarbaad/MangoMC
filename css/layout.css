@@ -43,6 +43,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+    width: 100%
   }
 
   .package-card {
@@ -84,6 +85,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr));
     gap: 20px;
+    width: 100%
   }
 
 .package-card {
@@ -416,6 +418,7 @@ button.info:hover {
   gap: 20px;
   align-items: flex-start;
 }
+
 
 
 
