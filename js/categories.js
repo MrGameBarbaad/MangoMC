@@ -33,3 +33,24 @@ categoryItems.forEach(item => {
     showCategory(`${category}-section`);
   });
 });
+
+const homeInfo = document.getElementById("home-info");
+const homeBtn = document.getElementById("homeBtn");
+
+if (homeBtn) {
+  homeBtn.addEventListener("click", () => {
+    categoryItems.forEach(i => i.classList.remove("active"));
+
+    sections.forEach(section => {
+      section.classList.remove("show");
+      setTimeout(() => section.classList.remove("active"), 200);
+    });
+
+    homeInfo.style.display = "block";
+    homeInfo.style.opacity = "0";
+
+    setTimeout(() => {
+      homeInfo.style.opacity = "1";
+    }, 20);
+  });
+}
