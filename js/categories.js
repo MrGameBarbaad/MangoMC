@@ -60,3 +60,10 @@ homeBtn.addEventListener("click", () => {
   featured.classList.remove("hidden");
   homeInfo.classList.remove("hidden");
 });
+
+// Hide categories on first load
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".category-section").forEach(section => {
+    section.classList.add("hidden");
+  });
+});
