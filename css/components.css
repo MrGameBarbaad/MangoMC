@@ -512,6 +512,12 @@
   border-left: 3px solid #9ca3af;
 }
 
+/* Hide all categories by default */
+.category-section {
+  display: none;
+}
 
-
-
+/* Show active category */
+.category-section.active {
+  display: block;
+}
