@@ -515,9 +515,17 @@
 /* Hide all categories by default */
 .category-section {
   display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 /* Show active category */
 .category-section.active {
   display: block;
+}
+
+.category-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
