@@ -81,10 +81,10 @@
 }
 
 .package-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    gap: 20px;
+  }
 
 .package-card {
   background: #1c1c23;
@@ -97,9 +97,8 @@
 
 .package-img {
   width: 100%;
-  max-height: 140px;
+  max-height: 160px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
 .package-title {
@@ -417,5 +416,6 @@ button.info:hover {
   gap: 20px;
   align-items: flex-start;
 }
+
 
 
